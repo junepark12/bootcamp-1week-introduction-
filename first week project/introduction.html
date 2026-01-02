@@ -1,131 +1,98 @@
-<!DOCTYPE html>
-<html lang="ko">
-
+<!DOCTYPE html> <!--HTML5를 사용하는 선언-->
+<html lang="ko"><!--문서 언어 설정 (ko는 한국어)-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>박준서의 포트폴리오</title>
-    
+    <meta charset="UTF-8"> <!--문서의 인코딩 설정-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--웹페이지 사용자 관련 설정--> 
+    <title>박준서의 포트폴리오</title> <!--문서 제목-->
     <style>
-        /* 전체 페이지 설정 */
+        
         body {
-            font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; /* 깔끔한 폰트 */
-            line-height: 1.6;
-            background-color: #f4f4f4; /* 연한 회색 배경 */
-            margin: 0;
-            padding: 20px;
-            color: #333;
+            font-family: 'Malgun Gothic', sans-serif; /* 글씨체를 맑은 고딕으로 설정 */
+            background-color: #f4f4f4; /* 배경색을 연한 회색으로 설정 (눈이 편안함) */
+            margin: 0; /* 페이지 기본 여백 제거 */
+            padding: 20px; /* 안쪽 여백을 20px 줌 */
         }
 
-        /* 내용이 들어가는 하얀 박스 */
+        /* .container: 내용물을 감싸는 하얀색 박스에 대한 설정 (.은 class를 의미함) */
         .container {
-            max-width: 800px; /* 최대 너비 제한 */
-            margin: 0 auto; /* 가운데 정렬 */
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px; /* 모서리 둥글게 */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 그림자 효과 */
+            max-width: 800px; /* 박스의 너비가 800px을 넘지 않게 제한 */
+            margin: 0 auto;   /* 상하 여백 0, 좌우 여백 자동 -> "화면 정중앙 정렬" 효과 */
+            background-color: white; /* 박스 배경색은 흰색 */
+            padding: 40px;    /* 내용물과 박스 테두리 사이의 간격 */
+            border-radius: 10px; /* 모서리를 둥글게 깎음 */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 살짝 그림자를 줘서 입체감 생성 */
         }
 
-        /* 제목 스타일 */
+        /* h1: 가장 큰 제목 꾸미기 */
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db; /* 파란 밑줄 */
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #2980b9;
-            margin-top: 30px;
+            color: #2c3e50; /* 진한 남색 글자 */
+            border-bottom: 2px solid #3498db; /* 글자 아래에 파란색 밑줄 긋기 */
+            padding-bottom: 10px; /* 밑줄과 글자 사이 간격 벌리기 */
         }
 
-        /* 리스트 스타일 */
-        ul {
-            list-style-type: square;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-
-        /* 표(Table) 스타일 - 훨씬 보기 좋게 변경 */
+        /* 테이블 디자인: 표의 테두리와 간격 설정 */
         table {
-            width: 100%;
-            border-collapse: collapse; /* 테두리 겹침 방지 */
+            width: 100%; /* 표 너비를 박스에 꽉 차게 설정 */
+            border-collapse: collapse; /* 테두리 사이의 빈틈을 없애서 깔끔하게 만듦 */
             margin-top: 10px;
         }
         th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
+            border: 1px solid #ddd; /* 셀마다 얇은 회색 테두리 */
+            padding: 12px; /* 셀 안의 글자와 테두리 사이 간격 */
+            text-align: center; /* 글자 가운데 정렬 */
         }
         th {
-            background-color: #3498db; /* 헤더 배경색 */
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9; /* 줄무늬 효과 */
-        }
-
-        /* 링크 버튼 스타일 */
-        .link-btn {
-            display: inline-block;
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-        .link-btn:hover {
-            background-color: #555;
+            background-color: #3498db; /* 제목 칸(헤더) 배경을 파란색으로 */
+            color: white; /* 제목 글씨는 흰색으로 */
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>안녕하세요, 예비 데이터 분석가 박준서입니다.</h1>
-        <p>
-            동국대학교 정보통신공학과에 재학 중이며, 데이터를 통해 세상의 문제를 해결하는 것에 관심이 많습니다.<br>
-            현재 <strong>AI 마케팅</strong>과 <strong>데이터 기획</strong> 분야로 나아가기 위해 꾸준히 학습하고 있습니다.
-        </p>
 
-        <h2>💻 기술 스택 (Tech Stack)</h2>
-        <p>학교 전공 수업과 개인 학습을 통해 다룰 수 있는 언어입니다.</p>
-        <ul>
-            <li><strong>Python:</strong> 데이터 분석 라이브러리 (Pandas, Matplotlib) 활용 가능</li>
-            <li><strong>C++ / Java:</strong> 객체지향 프로그래밍 및 알고리즘 문제 해결</li>
-            <li><strong>SQL:</strong> 데이터베이스 기초 쿼리 작성</li>
-            <li><strong>Git & GitHub:</strong> 버전 관리 및 협업 기초</li>
+        <h1>안녕하세요, 저는 박준서입니다.</h1><!--제목 표시-->
+        
+        <p>저는 현재 데이터 분석가를 진로로 희망하는 대학생입니다. AI 마케팅과 기획 분야에 관심이 많습니다.</p>
+
+        <h2>저의 프로그래밍 언어 활용 스택</h2><!--제목 표시-->
+
+        <ul><!--순서 없는 리스트를 사용하여 항목 나열-->
+            <li>Python (Pandas, Matplotlib) - 데이터 분석 주력 언어</li><!--리스트 아이템1-->
+            <li>C++ / Java - 알고리즘 문제 해결 가능</li><!--리스트 아이템2-->
+            <li>SQL - 데이터베이스 기초</li><!--리스트 아이템3-->
         </ul>
 
-        <h2>🎓 학력 (Education)</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>학교</th>
-                    <th>전공</th>
-                    <th>상태</th>
+        <h2>학력</h2><!--제목 표시-->
+
+        <table><!--테이블 사용하여 표 형태 정보 나열-->
+            <thead><!--테이블의 헤더 부분 나타내는 태그-->
+                <tr><!--행을 나타내는 태그-->
+                    <th>학교</th><!--열 제목1-->
+                    <th>전공</th><!--열 제목2-->
+                    <th>학위</th><!--열 제목3-->
+                    <th>졸업여부</th><!--열 제목4-->
                 </tr>
             </thead>
-            <tbody>
+
+            <tbody><!--테이블의 내용을 나타내는 태그-->
                 <tr>
-                    <td>동국대학교</td>
-                    <td>정보통신공학과</td>
-                    <td>2학년 재학 (학점 3.5)</td>
+                    <td>동국대학교 서울캠퍼스</td><!--학교 이름-->
+                    <td>정보통신공학과</td><!--학과-->
+                    <td>학사</td><!--학위-->
+                    <td>재학 (2학년)</td><!--졸업 여부-->
                 </tr>
+                
                 <tr>
-                    <td>숭실고등학교</td>
-                    <td>이공계</td>
-                    <td>졸업</td>
+                    <td>숭실고등학교</td><!--학교 이름-->
+                    <td>이공계</td><!--전공-->
+                    <td>-</td><!--학위-->
+                    <td>졸업</td><!--졸업 여부-->
                 </tr>
             </tbody>
-        </table>
-
-        <h2>📬 Contact & Link</h2>
-        <p>저의 프로젝트가 더 궁금하시다면 아래 깃허브를 방문해주세요.</p>
-        
-        <a href="https://github.com/본인아이디" class="link-btn" target="_blank">GitHub 바로가기</a>
-    </div>
+        </table> 
+    </div> 
 </body>
+
 </html>
